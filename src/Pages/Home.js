@@ -4,11 +4,11 @@ import Card from '../Components/Card';
 import Layout from '../Components/Layout';
 
 const Home = () => {
-    const [Arr, setArr] = useState([])
+    const [data, setData] = useState([])
     useEffect(() => {
         axios.get('https://dhol-tasha-backend.vercel.app/team/all')
             .then((res) => {
-                setArr(res.data.team);
+                setData(res.data.team);
             })
             .catch((err) => {
                 console.log(err);
@@ -19,7 +19,23 @@ const Home = () => {
         <Layout>
             <div className="home">
                 <div className="Cards">
-                    {Arr.map(Card)}
+                {data
+                    ? data.map((element, key) => (
+                        <Card
+                            key={key}
+                            id={element._id}
+                            name={element.name}
+                            mobile={element.mobile}
+                            email={element.email}
+                            numberOfEvents={element.numberOfEvents}
+                            maleDhol={element.maleDhol}
+                            maleTasha={element.maleTasha}
+                            femaleDhol={element.femaleDhol}
+                            femaleTasha={element.femaleTasha}
+                            address={element.address}
+                        />
+                        ))
+                    : alert("No Teams")}
                 </div>
             </div>
         </Layout>

@@ -1,39 +1,47 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import '../Assets/Styles/Card.css';
 
 function Card(props) {
     return (
-        <div className="Card">
-            <div className="name">
-                <h3>{props.name}</h3>
+        <div className="template">
+            <div className="info">
+                <div className="row">
+                    <div className="label">Name:</div>
+                    <div className="value">{props.name}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Phone:</div>
+                    <div className="value">{props.mobile}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Email:</div>
+                    <div className="value">{props.email}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Events:</div>
+                    <div className="value">{props.numberOfEvents}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Males in Dhol:</div>
+                    <div className="value">{props.maleDhol}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Males in Tasha:</div>
+                    <div className="value">{props.maleTasha}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Females in Dhol:</div>
+                    <div className="value">{props.femaleDhol}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Females in Tasha:</div>
+                    <div className="value">{props.femaleTasha}</div>
+                </div>
+                <div className="row">
+                    <div className="label">Address:</div>
+                    <div className="value"> {props.address}</div>
+                </div>
             </div>
-            <hr></hr>
-            <div className="mobile">
-                Phone: {props.mobile}
-            </div>
-            <div className="mobile">
-                Email: {props.email}
-            </div>
-            <div className="email">
-                Events: {props.numberOfEvents}
-            </div>
-            <div className="maleDhol">
-                Males in Dhol: {props.maleDhol}
-            </div>
-            <div className="maleTasha">
-                Males in Tasha : {props.maleTasha}
-            </div>
-            <div className="femaleDhol">
-                Females in Dhol: {props.femaleDhol}
-            </div>
-            <div className="femaleTasha">
-                Females in Tasha :{props.femaleTasha}
-            </div>
-            <div>
-                Address: {props.address}
-            </div>
-
-
         </div>
     );
 }
