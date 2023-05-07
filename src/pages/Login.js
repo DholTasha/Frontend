@@ -4,8 +4,11 @@ import axios from "axios";
 import Zooimg from '../assets/images/image.png'
 import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+// import '../assets/styles/Login.css'
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [usertype, setUsertype] = useState("customer");
@@ -22,6 +25,7 @@ const Login = () => {
             };
             console.log(user);
             localStorage.setItem("user", JSON.stringify(user));
+            navigate("/");
         })
         .catch(function (err) {
             console.log(err);
