@@ -1,0 +1,25 @@
+.template {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.label {
+    flex-basis: 150px;
+    font-weight: bold;
+}
+
+.value {
+    flex-grow: 1;
+}
