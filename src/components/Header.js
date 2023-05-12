@@ -42,6 +42,7 @@ function Header() {
                   <>
                     <Link to="/">Home</Link>
                     <Link to="/profile">Profile</Link>
+                    <Link to="/manage/profile">Manage Customer</Link>
                     <Link to="/" onClick={handleLogout}>
                       Logout
                     </Link>
@@ -50,7 +51,8 @@ function Header() {
                   <>
                     <Link to="/">Home</Link>
                     <Link to="/profile">Profile</Link>
-                    <Link to="/event">Event</Link>
+                    <Link to="/manage/profile">Manage Team</Link>
+                    <Link to="/manage/event">Manage Event</Link>
                     <Link to="/" onClick={handleLogout}>
                       Logout
                     </Link>

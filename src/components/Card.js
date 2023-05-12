@@ -1,7 +1,23 @@
 import React from 'react';
 import '../assets/styles/Card.css';
+import { useNavigate } from 'react-router-dom';
 
 function Card(props) {
+    const navigate = useNavigate();
+    let token = undefined;
+    if (localStorage.getItem("user")) {
+        token = JSON.parse(localStorage.getItem("user")).token;
+    }
+    const handleClick = (e) => {
+        e.preventDefault();
+        if(token != undefined) {
+            navigate(`/team/${props.id}`);
+        }
+        else {
+            alert('Please Login');
+            navigate('/login');
+        }
+    };
     return (
         <div className="template">
             <div className="info">
@@ -41,6 +57,7 @@ function Card(props) {
                     <div className="label">Address:</div>
                     <div className="value"> {props.address}</div>
                 </div>
+                <button value={props.id} onClick={handleClick}>View Team</button>
             </div>
         </div>
     );

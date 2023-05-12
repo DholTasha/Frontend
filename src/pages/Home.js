@@ -4,7 +4,11 @@ import Card from '../components/Card';
 import Layout from '../components/Layout';
 
 const Home = () => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    let token = undefined;
+    if (localStorage.getItem("user")) {
+        token = JSON.parse(localStorage.getItem("user")).token;
+    }
     useEffect(() => {
         axios.get('https://dhol-tasha-backend.vercel.app/team/all')
             .then((res) => {
@@ -35,7 +39,8 @@ const Home = () => {
                             address={element.address}
                         />
                         ))
-                    : alert("No Teams")}
+                    : alert("No Teams")
+                }
                 </div>
             </div>
         </Layout>

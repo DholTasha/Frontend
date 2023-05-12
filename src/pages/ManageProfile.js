@@ -4,7 +4,7 @@ import '../assets/styles/Signup.css'
 import Layout from '../components/Layout';
 import axios from 'axios';
 
-function UpdateProfile() {
+function ManageProfile() {
     const [data, setData] = useState([]);
     const user = JSON.parse(localStorage.getItem("user"));
     const usertype = user.usertype;
@@ -48,8 +48,8 @@ function UpdateProfile() {
         e.preventDefault();
         let updateData;
         if(usertype === 'team') {
-            const {name, email, maleDhol, femaleDhol, maleTasha, femaleTasha, address, mobile} = data;
-            updateData = {name, email, maleDhol, femaleDhol, maleTasha, femaleTasha, address, mobile};
+            const {name, email, maleDhol, femaleDhol, maleTasha, femaleTasha, address, mobile, videoLink} = data;
+            updateData = {name, email, maleDhol, femaleDhol, maleTasha, femaleTasha, address, mobile, videoLink};
         }
         else {
             const {name, email, mobile} = data;
@@ -74,7 +74,7 @@ function UpdateProfile() {
     return (
         <Layout>
             <form onSubmit={handleSubmit}>
-                <h1>Update Form</h1>
+                <h1>Manage Profile</h1>
                 <div>
                     <label>
                         Name:
@@ -98,25 +98,25 @@ function UpdateProfile() {
                         <div>
                             <label>
                                 Male Dhol:
-                                <input type="text" name="maleDhol" defaultValue = {data.maleDhol} onChange={handleChange}  />
+                                <input type="number" name="maleDhol" defaultValue = {data.maleDhol} onChange={handleChange}  />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Female Dhol:
-                                <input type="text" name="femaleDhol" defaultValue = {data.femaleDhol} onChange={handleChange}  />
+                                <input type="number" name="femaleDhol" defaultValue = {data.femaleDhol} onChange={handleChange}  />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Male Tasha:
-                                <input type="text" name="maleTasha" defaultValue = {data.maleTasha} onChange={handleChange}  />
+                                <input type="number" name="maleTasha" defaultValue = {data.maleTasha} onChange={handleChange}  />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Female Tasha:
-                                <input type="text" name="femaleTasha" defaultValue = {data.femaleTasha} onChange={handleChange}  />
+                                <input type="number" name="femaleTasha" defaultValue = {data.femaleTasha} onChange={handleChange}  />
                             </label>
                         </div>
                         <div>
@@ -139,4 +139,4 @@ function UpdateProfile() {
     )
 }
 
-export default UpdateProfile;
+export default ManageProfile;
