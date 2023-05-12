@@ -23,6 +23,7 @@ const Login = () => {
             };
             console.log(user);
             localStorage.setItem("user", JSON.stringify(user));
+            navigate("/");
         })
         .catch(function (err) {
             console.log(err);
