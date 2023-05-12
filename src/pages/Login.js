@@ -3,12 +3,13 @@ import { useState } from "react";
 import axios from "axios";
 import Zooimg from '../assets/images/image.png'
 import Layout from "../components/Layout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [usertype, setUsertype] = useState("customer");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,6 +27,7 @@ const Login = () => {
         .catch(function (err) {
             console.log(err);
         });
+        navigate('/');
     };
 
     return (
@@ -72,7 +74,7 @@ const Login = () => {
                         <p>
                             Don't have an account ?
                             <Link to={"/signup"}>
-                                <span>sign up</span>
+                                <span>Sign Up</span>
                             </Link>
                         </p>
                     </form>

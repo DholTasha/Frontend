@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 import '../assets/styles/Signup.css'
 import Layout from '../components/Layout';
 
@@ -6,33 +8,41 @@ function SignUpForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [mobile, setMobile] = useState('');
-    const [userType, setUserType] = useState('');
-    const [maleDhol, setMaleDhol] = useState('');
-    const [femaleDhol, setFemaleDhol] = useState('');
-    const [maleTasha, setMaleTasha] = useState('');
-    const [femaleTasha, setFemaleTasha] = useState('');
-    const [city, setCity] = useState('');
+    const [mobile, setMobile] = useState(0);
+    const [usertype, setUsertype] = useState('team');
+    const [maleDhol, setMaleDhol] = useState(0);
+    const [femaleDhol, setFemaleDhol] = useState(0);
+    const [maleTasha, setMaleTasha] = useState(0);
+    const [femaleTasha, setFemaleTasha] = useState(0);
+    const [address, setAddress] = useState('');
     const [videoLink, setVideoLink] = useState('');
+    const navigate = useNavigate();
 
-    const handleUserTypeChange = (event) => {
-        setUserType(event.target.value);
+    const handleUsertypeChange = (event) => {
+        setUsertype(event.target.value);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log({
-            name,
-            email,
-            password,
-            mobile,
-            userType,
-            maleDhol,
-            femaleDhol,
-            maleTasha,
-            femaleTasha,
-            city,
-            videoLink
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        let data;
+        if (usertype === 'team') {
+            data = { name, email, password, mobile, maleDhol, femaleDhol, maleTasha, femaleTasha, address, videoLink };
+        }  
+        else{
+            data = { name, email, password, mobile };
+        }
+        console.log(data);
+        await axios.post(`https://dhol-tasha-backend.vercel.app/${usertype}/signup`, data)
+        .then(function (res) {
+            let user = {
+                token: res.data.token,
+                usertype: res.data.usertype
+            };
+            localStorage.setItem("user", JSON.stringify(user));
+            navigate('/');
+        })
+        .catch(function (err) {
+            console.log(err);
         });
     };
 
@@ -62,7 +72,7 @@ function SignUpForm() {
                 <div>
                     <label>
                         Mobile:
-                        <input type="tel" value={mobile} onChange={(event) => setMobile(event.target.value)} />
+                        <input type="number" value={mobile} onChange={(event) => setMobile(parseInt(event.target.value))} />
                     </label>
                 </div>
                 <div>
@@ -70,45 +80,45 @@ function SignUpForm() {
                         User Type:
                     </label>
                     <label>
-                        <input type="radio" name="user-type" value="customer" checked={userType === 'customer'} onChange={handleUserTypeChange} />
+                        <input type="radio" name="user-type" value="customer" checked={usertype === 'customer'} onChange={handleUsertypeChange} />
                         Customer
                     </label>
                     <label>
-                        <input type="radio" name="user-type" value="team" checked={userType === 'team'} onChange={handleUserTypeChange} />
+                        <input type="radio" name="user-type" value="team" checked={usertype === 'team'} onChange={handleUsertypeChange} />
                         Team
                     </label>
                 </div>
-                {userType === 'team' && (
+                {usertype === 'team' && (
                     <>
                         <div>
                             <label>
                                 Male Dhol:
-                                <input type="text" value={maleDhol} onChange={(event) => setMaleDhol(event.target.value)} />
+                                <input type="number" value={maleDhol} onChange={(event) => setMaleDhol(parseInt(event.target.value))} />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Female Dhol:
-                                <input type="text" value={femaleDhol} onChange={(event) => setFemaleDhol(event.target.value)} />
+                                <input type="number" value={femaleDhol} onChange={(event) => setFemaleDhol(parseInt(event.target.value))} />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Male Tasha:
-                                <input type="text" value={maleTasha} onChange={(event) => setMaleTasha(event.target.value)} />
+                                <input type="number" value={maleTasha} onChange={(event) => setMaleTasha(parseInt(event.target.value))} />
                             </label>
                         </div>
                         <div>
                             <label>
                                 Female
                                 Tasha:
-                                <input type="text" value={femaleTasha} onChange={(event) => setFemaleTasha(event.target.value)} />
+                                <input type="number" value={femaleTasha} onChange={(event) => setFemaleTasha(parseInt(event.target.value))} />
                             </label>
                         </div>
                         <div>
                             <label>
-                                City:
-                                <input type="text" value={city} onChange={(event) => setCity(event.target.value)} />
+                                Address:
+                                <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} />
                             </label>
                         </div>
                         <div>
@@ -120,6 +130,12 @@ function SignUpForm() {
                     </>
                 )}
                 <button type="submit">Submit</button>
+                <p>
+                    Already have an account ?
+                    <Link to={"/login"}>
+                        <span>Log In</span>
+                    </Link>
+                </p>
             </form>
         </Layout>
     )

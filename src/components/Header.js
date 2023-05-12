@@ -50,7 +50,7 @@ function Header() {
                   <>
                     <Link to="/">Home</Link>
                     <Link to="/profile">Profile</Link>
-                    <Link to="/event">Marketplace</Link>
+                    <Link to="/event">Event</Link>
                     <Link to="/" onClick={handleLogout}>
                       Logout
                     </Link>
