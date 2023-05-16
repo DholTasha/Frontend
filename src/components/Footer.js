@@ -6,7 +6,7 @@ export default function Footer() {
         style={{ fontFamily: "Poppins ,sans-serif" }}>
         <footer class="text-center text-lg-start text-dark">
           <div class="footer-top d-flex justify-content-between p-4" >
-            <div class="sports_me-5">
+            <div class="sports_me-5 tagline">
               <h5>Get connected with us on social networks:</h5>
             </div>
             <div className="myfooter_icons fs-4">
@@ -27,36 +27,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          {/* <section class=""> */}
   
           <div className="footer-main d-flex ">
-            {/* <div className="developers w-50 my-3">
-            <h6 className="devloper_title fs-3 text-center fw-bold ">Developers</h6>
-              <div className="row  justify-content-lg-center m-5" align="center">
-                <div className="col-4 devprofile ">
-                  <div className="profileimage"></div>
-                  <p>Sayeed Khan</p>
-                </div>
-                <div className="col-4 devprofile">
-                  <div className="profileimage"><img   className="profileimage" /></div>
-                  <p>Harsh Dhawale</p>
-                </div>
-                <div className="col-4 devprofile">
-                  <div className="profileimage"><img   className="profileimage" /></div>
-                  <p>Sanket Jhavar</p>
-                </div>
-                <div className="col-4 devprofile">
-                  <div className="profileimage"></div>
-                  <p>Hetavi Gandhi</p>
-                </div>
-                <div className="col-4 devprofile">
-                  <div className="profileimage"><img   className="profileimage" /></div>
-                  <p>Samruddhi Kadam</p>
-                </div>
-              </div>
-  
-            </div> */}
-  
             <div className="footer-contact  mx-auto my-4 fs-5 ">
               <div className="col " >
               <h6 class="sports_text-uppercase fs-3 text-center fw-bold ">Contact Us</h6>
@@ -71,7 +43,7 @@ export default function Footer() {
           </div>
   
           < div class="text-center p-3 fs-5 fw-bold" style={{ backgroundColor: 'rgba(210, 109, 109, 0.2)' }}>
-            © 2020 Copyright:
+            © 2023 Copyright:
           </div >
         </footer >
       </div >

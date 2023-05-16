@@ -100,13 +100,6 @@ function Header() {
                     </>
                   ) : (
                     <>
-                      {/* <Link to="/">Home</Link> */}
-                      {/* <Link to="/profile">Profile</Link> */}
-                      {/* <Link to="/manage/profile">Manage Team</Link> */}
-                      {/* <Link to="/manage/event">Manage Event</Link> */}
-                      {/* <Link to="/" onClick={handleLogout}>
-                        Logout
-                      </Link> */}
                       <li className="nav-item">
                         <a className="nav-link" href="/">Home</a>
                       </li>

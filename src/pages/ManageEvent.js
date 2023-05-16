@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 import '../assets/styles/Home.css'
+import '../assets/styles/ManageEvent.css'
 import EventCard from '../components/EventCard';
 
 const Event = (props) => {
@@ -33,7 +34,31 @@ const Event = (props) => {
 
     return (
       <Layout>
-          <div className="home">
+          <div class="card" style={{width: "38rem"}}>
+            <div class="card-body">
+              <h5 class="card-title">Manage Event</h5>
+              <a href="#" class="btn add-event-button" onClick={handleAddEvent}>Add Event</a>
+            </div>
+          </div>
+            {data
+                ? data.map((element, key) => (
+                    <EventCard
+                        key={key}
+                        id={element._id}
+                        name={element.name}
+                        location={element.location}
+                        maleDhol={element.maleDhol}
+                        maleTasha={element.maleTasha}
+                        femaleDhol={element.femaleDhol}
+                        femaleTasha={element.femaleTasha}
+                        videoLink={element.videoLink}
+                        isManage={1}
+                    />
+                    ))
+                : alert("No Teams")}
+
+
+          {/* <div className="home">
             <p>Manage Event</p>
             <button onClick={handleAddEvent}>Add Event</button>
             <div className="events">
@@ -54,7 +79,7 @@ const Event = (props) => {
                     ))
                 : alert("No Teams")}
             </div>
-          </div>
+          </div> */}
       </Layout>
     )
 }

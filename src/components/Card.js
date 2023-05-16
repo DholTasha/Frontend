@@ -19,45 +19,40 @@ function Card(props) {
         }
     };
     return (
-        <div className="template">
-            <div className="info">
-                <div className="row">
-                    <span className="label">Name:</span>
-                    <span className="value">{props.name}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Phone:</span>
-                    <span className="value">{props.mobile}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Email:</span>
-                    <span className="value">{props.email}</span>
-                </div>
-                {/* <div className="row">
-                    <span className="label">Events:</span>
-                    <span className="value">{props.numberOfEvents}</span>
-                </div> */}
-                <div className="row">
-                    <span className="label">Males in Dhol:</span>
-                    <span className="value">{props.maleDhol}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Males in Tasha:</span>
-                    <span className="value">{props.maleTasha}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Females in Dhol:</span>
-                    <span className="value">{props.femaleDhol}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Females in Tasha:</span>
-                    <span className="value">{props.femaleTasha}</span>
-                </div>
-                <div className="row">
-                    <span className="label">Address:</span>
-                    <span className="value"> {props.address}</span>
-                </div>
-                <button className='view-button-class' value={props.id} onClick={handleClick}>View Team</button>
+        <div class="container">
+	
+            <div class="table">
+                <div class="table-content">	
+                    <div class="table-row">		
+                        <div class="table-data">Name</div>
+                        <div class="table-data">{props.name}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Phone</div>
+                        <div class="table-data">{props.mobile}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Males in Dhol</div>
+                        <div class="table-data">{props.maleDhol}</div>
+                    </div>
+                     <div class="table-row">
+                         <div class="table-data">Males in Tasha</div>
+                         <div class="table-data">{props.maleTasha}</div>
+                   </div>
+                     <div class="table-row">
+                        <div class="table-data">Females in Dhol</div>
+                        <div class="table-data">{props.femaleDhol}</div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-data">Females in Tasha</div>
+                        <div class="table-data">{props.femaleTasha}</div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-data">Address</div>
+                        <div class="table-data">{props.address}</div>
+                    </div>
+                     <button className='view-button-class' value={props.id} onClick={handleClick}>View Team</button>
+                </div>	
             </div>
         </div>
     );

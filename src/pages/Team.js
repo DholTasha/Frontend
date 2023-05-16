@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import '../assets/styles/Profile.css'
+import '../assets/styles/Card.css'
 import Layout from "../components/Layout";
 import EventCard from "../components/EventCard";
 
@@ -62,7 +63,73 @@ function Profile() {
 
     return (
         <Layout>
-            <div className="profile">
+        
+            <div class="container">
+            <div class="table">
+                <div class="table-content">	
+                    <div class="table-row">		
+                        <div class="table-data">Name</div>
+                        <div class="table-data">{data.name}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Email</div>
+                        <div class="table-data">{data.email}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Mobile</div>
+                        <div class="table-data">{data.mobile}</div>
+                    </div>
+                     <div class="table-row">
+                         <div class="table-data">Male Dhol</div>
+                         <div class="table-data">{data.maleDhol}</div>
+                   </div>
+                     <div class="table-row">
+                        <div class="table-data">Female Dhol</div>
+                        <div class="table-data">{data.femaleDhol}</div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-data">Male Tasha</div>
+                        <div class="table-data">{data.maleTasha}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Feale Tasha</div>
+                        <div class="table-data">{data.femaleTasha}</div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-data">Address</div>
+                        <div class="table-data">{data.address}</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-data">Video Link</div>
+                        <div class="table-data">{data.videoLink}</div>
+                    </div>
+                </div>	
+                {/* <div className="home">
+                    <div className="events"> */}
+                        {events
+                            ? events.map((element, key) => (
+                                <EventCard
+                                    key={key}
+                                    id={element._id}
+                                    name={element.name}
+                                    location={element.location}
+                                    maleDhol={element.maleDhol}
+                                    maleTasha={element.maleTasha}
+                                    femaleDhol={element.femaleDhol}
+                                    femaleTasha={element.femaleTasha}
+                                    videoLink={element.videoLink}
+                                    isManage={0}
+                                />
+                            ))
+                            : alert("No Events")}
+                    {/* </div>
+                </div> */}
+            </div>
+        </div>
+            
+
+
+            {/* <div className="profile">
                 <h1>Name:{data.name}</h1>
                 <p>Email: {data.email}</p>
                 <p>Mobile: {data.mobile}</p>
@@ -73,7 +140,6 @@ function Profile() {
                     <p>Female Tasha: {data.femaleTasha}</p>
                     <p>Address: {data.address}</p>
                     <p>Video Link: {data.videoLink}</p>
-                    {/* <p>Number of Events: {data.numberOfEvents}</p> */}
                 </div>
                 <div className="home">
                     <div className="events">
@@ -95,7 +161,7 @@ function Profile() {
                             : alert("No Events")}
                     </div>
                 </div>
-            </div>
+            </div> */}
         </Layout>
     );
 }

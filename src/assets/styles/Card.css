@@ -1,33 +1,66 @@
-.template {
-    margin: 50px auto;
-    /* max-width: 800px; */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 110%;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+
+*, *:before, *:after {
+	box-sizing:border-box;
 }
+
+
 .view-button-class{
     background-color: rgb(238, 168, 39);
     color: azure;
     width: 40%;
     height: 50px;
-}
-.info {
-    margin-top: 20px;
-}
-
-.row {
-    display: flex;
-    margin-bottom: 10px;
+} 
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
 }
 
-.label {
-    flex-basis: 150px;
-    font-weight: bold;
-    width: 0%;
+.container {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
 }
 
-.value {
-    flex-grow: 1;
-    width: 0%;
+.table {
+	width:100%;
+	border:1px solid white;
 }
+
+
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:18px 0;
+	
+	&:nth-of-type(odd) {
+		background:rgb(228, 176, 79);
+	}
+	&:nth-of-type(even) {
+		background:rgb(225, 192, 135);
+	}
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.table-content{
+    width: 60%;
+    margin-bottom: 7%;
+    margin:7% auto;
+    text-align: center;
+}
+	
+	

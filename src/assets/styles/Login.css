@@ -1,0 +1,23 @@
+.heading{
+    margin-bottom: 15%;
+    background-color: #f1d7b9;
+}
+.loginform{
+    background-color: #f1d7b9;
+}
+.emapass{
+    margin-bottom: 6%;
+}
+.bullets{
+    margin-right: 39%;
+    font-size: larger;
+    font-weight: bolder;
+}
+.bullets-class{
+    margin-bottom: 6%;
+}
+.subbtn{
+    background-color: orange;
+    font-size: larger;
+    font-weight: bolder;
+}

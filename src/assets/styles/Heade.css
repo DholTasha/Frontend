@@ -2,9 +2,10 @@ nav li{
     list-style-type: none;
     font-weight: bolder;
     /* font-size: larger; */
-    margin-right: 3%;
-    margin-left: 3%;
+    /* margin-right: 3%;
+    margin-left: 3%; */
     padding: 1.5%;
+    
 }
 .login-class{
     font-size: larger;
@@ -19,7 +20,7 @@ nav li{
     font-weight: bolder;
 }
 nav li :hover{
-    background-color: orange;
+    background-color: rgb(245, 183, 68);
     border-radius: 13%;
     color: aliceblue;
 }
@@ -34,6 +35,8 @@ nav li :hover{
     text-align: center;
     padding: 4px;
     margin-top: 8px;
+    background-color: orange;
+    border-radius: 9%;
 }
 .navbar{
     background-color: rgb(240, 209, 163);

@@ -21,8 +21,8 @@ const Home = () => {
 
     return (
         <Layout>
-            <div className="home">
-                <div className="Cards">
+            {/* <div className="home">
+                <div className="Cards"> */}
                 {data
                     ? data.map((element, key) => (
                         <Card
@@ -41,8 +41,8 @@ const Home = () => {
                         ))
                     : alert("No Teams")
                 }
-                </div>
-            </div>
+                {/* </div>
+            </div> */}
         </Layout>
     )
 }
