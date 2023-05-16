@@ -3,13 +3,16 @@
     grid-template-columns: 30% 30% 30%;
     background-color: rgb(245, 246, 232);
     text-align: center;
-    padding-left: 8%;
+    padding-left: 26%;
 }
 .template{
     background-color: rgb(243, 193, 160);
-    width: 60%;
+    width: 98%;
 }
 .events{
     display: grid;
     grid-template-columns: 30% 30% 30%;
+}
+#root{
+    background-color: rgb(245, 246, 232);
 }

@@ -1,11 +1,17 @@
 .template {
     margin: 50px auto;
-    max-width: 800px;
+    /* max-width: 800px; */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 110%;
 }
-
+.view-button-class{
+    background-color: rgb(238, 168, 39);
+    color: azure;
+    width: 40%;
+    height: 50px;
+}
 .info {
     margin-top: 20px;
 }
@@ -18,8 +24,10 @@
 .label {
     flex-basis: 150px;
     font-weight: bold;
+    width: 0%;
 }
 
 .value {
     flex-grow: 1;
+    width: 0%;
 }

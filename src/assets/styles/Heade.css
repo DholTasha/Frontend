@@ -1,0 +1,40 @@
+nav li{
+    list-style-type: none;
+    font-weight: bolder;
+    /* font-size: larger; */
+    margin-right: 3%;
+    margin-left: 3%;
+    padding: 1.5%;
+}
+.login-class{
+    font-size: larger;
+}
+#homepage-header{
+    margin-bottom: 2%;
+}
+.nav-logo{
+    left: 3%;
+    position: inherit;
+    color: rgb(255, 132, 0);
+    font-weight: bolder;
+}
+nav li :hover{
+    background-color: orange;
+    border-radius: 13%;
+    color: aliceblue;
+}
+.nav-icons{
+    right: 10px;
+    position: absolute;
+    width: 500px;
+}
+.nav-link{
+    /* width: 65px;
+    padding: 5%; */
+    text-align: center;
+    padding: 4px;
+    margin-top: 8px;
+}
+.navbar{
+    background-color: rgb(240, 209, 163);
+}

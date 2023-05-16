@@ -22,42 +22,42 @@ function Card(props) {
         <div className="template">
             <div className="info">
                 <div className="row">
-                    <div className="label">Name:</div>
-                    <div className="value">{props.name}</div>
+                    <span className="label">Name:</span>
+                    <span className="value">{props.name}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Phone:</div>
-                    <div className="value">{props.mobile}</div>
+                    <span className="label">Phone:</span>
+                    <span className="value">{props.mobile}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Email:</div>
-                    <div className="value">{props.email}</div>
+                    <span className="label">Email:</span>
+                    <span className="value">{props.email}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Events:</div>
-                    <div className="value">{props.numberOfEvents}</div>
+                    <span className="label">Events:</span>
+                    <span className="value">{props.numberOfEvents}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Males in Dhol:</div>
-                    <div className="value">{props.maleDhol}</div>
+                    <span className="label">Males in Dhol:</span>
+                    <span className="value">{props.maleDhol}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Males in Tasha:</div>
-                    <div className="value">{props.maleTasha}</div>
+                    <span className="label">Males in Tasha:</span>
+                    <span className="value">{props.maleTasha}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Females in Dhol:</div>
-                    <div className="value">{props.femaleDhol}</div>
+                    <span className="label">Females in Dhol:</span>
+                    <span className="value">{props.femaleDhol}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Females in Tasha:</div>
-                    <div className="value">{props.femaleTasha}</div>
+                    <span className="label">Females in Tasha:</span>
+                    <span className="value">{props.femaleTasha}</span>
                 </div>
                 <div className="row">
-                    <div className="label">Address:</div>
-                    <div className="value"> {props.address}</div>
+                    <span className="label">Address:</span>
+                    <span className="value"> {props.address}</span>
                 </div>
-                <button value={props.id} onClick={handleClick}>View Team</button>
+                <button className='view-button-class' value={props.id} onClick={handleClick}>View Team</button>
             </div>
         </div>
     );
