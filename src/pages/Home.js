@@ -31,7 +31,7 @@ const Home = () => {
                             name={element.name}
                             mobile={element.mobile}
                             email={element.email}
-                            numberOfEvents={element.numberOfEvents}
+                            // numberOfEvents={element.numberOfEvents}
                             maleDhol={element.maleDhol}
                             maleTasha={element.maleTasha}
                             femaleDhol={element.femaleDhol}

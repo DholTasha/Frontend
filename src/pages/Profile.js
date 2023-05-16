@@ -96,9 +96,9 @@ function Profile() {
           </>
           ) : (
             <>
-              <div>
+              {/* <div>
                 <p>Number of Events: {data.numberOfEvents}</p>
-              </div>
+              </div> */}
             </>
           )
         }

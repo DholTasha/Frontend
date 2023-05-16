@@ -33,10 +33,10 @@ function Card(props) {
                     <span className="label">Email:</span>
                     <span className="value">{props.email}</span>
                 </div>
-                <div className="row">
+                {/* <div className="row">
                     <span className="label">Events:</span>
                     <span className="value">{props.numberOfEvents}</span>
-                </div>
+                </div> */}
                 <div className="row">
                     <span className="label">Males in Dhol:</span>
                     <span className="value">{props.maleDhol}</span>

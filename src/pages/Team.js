@@ -73,7 +73,7 @@ function Profile() {
                     <p>Female Tasha: {data.femaleTasha}</p>
                     <p>Address: {data.address}</p>
                     <p>Video Link: {data.videoLink}</p>
-                    <p>Number of Events: {data.numberOfEvents}</p>
+                    {/* <p>Number of Events: {data.numberOfEvents}</p> */}
                 </div>
                 <div className="home">
                     <div className="events">
