@@ -63,7 +63,6 @@ function Profile() {
 
     return (
         <Layout>
-        
             <div class="container">
             <div class="table">
                 <div class="table-content">	
@@ -103,9 +102,7 @@ function Profile() {
                         <div class="table-data">Video Link</div>
                         <div class="table-data">{data.videoLink}</div>
                     </div>
-                </div>	
-                {/* <div className="home">
-                    <div className="events"> */}
+                </div>
                         {events
                             ? events.map((element, key) => (
                                 <EventCard
@@ -122,46 +119,8 @@ function Profile() {
                                 />
                             ))
                             : alert("No Events")}
-                    {/* </div>
-                </div> */}
             </div>
         </div>
-            
-
-
-            {/* <div className="profile">
-                <h1>Name:{data.name}</h1>
-                <p>Email: {data.email}</p>
-                <p>Mobile: {data.mobile}</p>
-                <div>
-                    <p>Male Dhol: {data.maleDhol}</p>
-                    <p>Female Dhol: {data.femaleDhol}</p>
-                    <p>Male Tasha: {data.maleTasha}</p>
-                    <p>Female Tasha: {data.femaleTasha}</p>
-                    <p>Address: {data.address}</p>
-                    <p>Video Link: {data.videoLink}</p>
-                </div>
-                <div className="home">
-                    <div className="events">
-                        {events
-                            ? events.map((element, key) => (
-                                <EventCard
-                                    key={key}
-                                    id={element._id}
-                                    name={element.name}
-                                    location={element.location}
-                                    maleDhol={element.maleDhol}
-                                    maleTasha={element.maleTasha}
-                                    femaleDhol={element.femaleDhol}
-                                    femaleTasha={element.femaleTasha}
-                                    videoLink={element.videoLink}
-                                    isManage={0}
-                                />
-                            ))
-                            : alert("No Events")}
-                    </div>
-                </div>
-            </div> */}
         </Layout>
     );
 }

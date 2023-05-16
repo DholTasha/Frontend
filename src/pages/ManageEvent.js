@@ -56,30 +56,6 @@ const Event = (props) => {
                     />
                     ))
                 : alert("No Teams")}
-
-
-          {/* <div className="home">
-            <p>Manage Event</p>
-            <button onClick={handleAddEvent}>Add Event</button>
-            <div className="events">
-            {data
-                ? data.map((element, key) => (
-                    <EventCard
-                        key={key}
-                        id={element._id}
-                        name={element.name}
-                        location={element.location}
-                        maleDhol={element.maleDhol}
-                        maleTasha={element.maleTasha}
-                        femaleDhol={element.femaleDhol}
-                        femaleTasha={element.femaleTasha}
-                        videoLink={element.videoLink}
-                        isManage={1}
-                    />
-                    ))
-                : alert("No Teams")}
-            </div>
-          </div> */}
       </Layout>
     )
 }

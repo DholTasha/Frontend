@@ -61,9 +61,6 @@ function EventCard(props) {
                     <div className='button-class'>
                     {props.isManage && <>
                         <button className='view-button-class' onClick={`/event/form/${props.id}`}>Update</button>
-                        {/* <Link to={`/event/form/${props.id}`}>
-                            <span>Update</span>
-                        </Link> */}
                         <button className='view-button-class' onClick={handleClick}>Delete</button>
                     </>}
                     </div>
@@ -71,46 +68,6 @@ function EventCard(props) {
                 </div>	
             </div>
         </div>
-        
-        // <div className="template">
-        //     <div className="info">
-        //         <div className="row">
-        //             <div className="label">Event Name:</div>
-        //             <div className="value">{props.name}</div>
-        //         </div>
-        //         <div className="row">
-        //             <div className="label">Event Location:</div>
-        //             <div className="value">{props.location}</div>
-        //         </div>
-
-        //         <div className="row">
-        //             <div className="label">Males in Dhol:</div>
-        //             <div className="value">{props.maleDhol}</div>
-        //         </div>
-        //         <div className="row">
-        //             <div className="label">Males in Tasha:</div>
-        //             <div className="value">{props.maleTasha}</div>
-        //         </div>
-        //         <div className="row">
-        //             <div className="label">Females in Dhol:</div>
-        //             <div className="value">{props.femaleDhol}</div>
-        //         </div>
-        //         <div className="row">
-        //             <div className="label">Females in Tasha:</div>
-        //             <div className="value">{props.femaleTasha}</div>
-        //         </div>
-        //         <div className="row">
-        //             <div className="label">Event Video Link:</div>
-        //             <div className="value">{props.videoLink}</div>
-        //         </div>
-        //         {props.isManage && <>
-        //             <Link to={`/event/form/${props.id}`}>
-        //                 <span>Update</span>
-        //             </Link>
-        //             <button onClick={handleClick}>Delete</button>
-        //         </>}
-        //     </div>
-        // </div>
     );
 }
 
