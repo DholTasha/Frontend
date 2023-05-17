@@ -59,12 +59,13 @@ function EventCard(props) {
                         <div class="table-data">{props.videoLink}</div>
                     </div>
                     <div className='button-class'>
-                    {props.isManage && <>
-                        <button className='view-button-class' onClick={`/event/form/${props.id}`}>Update</button>
-                        <button className='view-button-class' onClick={handleClick}>Delete</button>
-                    </>}
+                    {
+                        props.isManage ? <>
+                            <button className='view-button-class' onClick={`/event/form/${props.id}`}>Update</button>
+                            <button className='view-button-class' onClick={handleClick}>Delete</button>
+                        </> : <></>
+                    }
                     </div>
-                    
                 </div>	
             </div>
         </div>

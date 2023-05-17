@@ -75,28 +75,57 @@ function Profile() {
                         <div class="table-data">{data.mobile}</div>
                     </div>
                 </div>
-                    
-                      
-                        {events
-                            ? events.map((element, key) => (
-                                <EventCard
-                                    key={key}
-                                    id={element._id}
-                                    name={element.name}
-                                    location={element.location}
-                                    maleDhol={element.maleDhol}
-                                    maleTasha={element.maleTasha}
-                                    femaleDhol={element.femaleDhol}
-                                    femaleTasha={element.femaleTasha}
-                                    videoLink={element.videoLink}
-                                    isManage={0}
-                                />
-                            ))
-                            : alert("No Events")
-                        }
-                    
-                  
-                
+
+                { usertype === "team" || teamId != undefined ? (
+                  <>
+                  <div class="table-content">	
+                      <div class="table-row">		
+                          <div class="table-data">Male Dhol</div>
+                          <div class="table-data">{data.maleDhol}</div>
+                      </div>
+                      <div class="table-row">
+                          <div class="table-data">Female Dhol</div>
+                          <div class="table-data">{data.femaleDhol}</div>
+                      </div>
+                      <div class="table-row">
+                          <div class="table-data">Male Tasha</div>
+                          <div class="table-data">{data.maleTasha}</div>
+                      </div>
+                      <div class="table-row">
+                          <div class="table-data">Female Tasha</div>
+                          <div class="table-data">{data.femaleTasha}</div>
+                      </div>
+                      <div class="table-row">
+                          <div class="table-data">Address</div>
+                          <div class="table-data">{data.address}</div>
+                      </div>
+                      <div class="table-row">
+                          <div class="table-data">Video Link</div>
+                          <div class="table-data">{data.videoLink}</div>
+                      </div>
+                  </div>
+                  {events
+                      ? events.map((element, key) => (
+                          <EventCard
+                              key={key}
+                              id={element._id}
+                              name={element.name}
+                              location={element.location}
+                              maleDhol={element.maleDhol}
+                              maleTasha={element.maleTasha}
+                              femaleDhol={element.femaleDhol}
+                              femaleTasha={element.femaleTasha}
+                              videoLink={element.videoLink}
+                              isManage={0}
+                          />
+                          ))
+                      : alert("No Events")}
+                  </>
+                  ) : (
+                    <>
+                    </>
+                  )
+                }
         </div>
       </div>
     </Layout>
